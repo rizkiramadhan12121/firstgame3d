@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfl0yw66a08da"]
+
+[ext_resource type="Script" path="res://mesh_instance_3d.gd" id="1_6xn8i"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="2_dc4ev"]
+[ext_resource type="Script" path="res://directional_light_3d.gd" id="3_efusg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cvben"]
+
+[node name="Main" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999889, -0.0148135, -0.0017963, 0.014922, 0.992618, 0.120366, 0, -0.120379, 0.992728, -1.898, -2.37262, -4.92216)
+mesh = SubResource("BoxMesh_cvben")
+script = ExtResource("1_6xn8i")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.99822, -0.0596374, 0, 0.0596374, 0.99822, 0, 0, 0, 1, -1.50024, -1.64639, -1.43033)
+script = ExtResource("2_dc4ev")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+script = ExtResource("3_efusg")
